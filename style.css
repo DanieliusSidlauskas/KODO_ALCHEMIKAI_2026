@@ -1,0 +1,499 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.Main-Container {
+    height: 100vh;
+}
+.notification {
+    height: 40px;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    font-family: "Oswald", sans-serif;
+}
+.notification i {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+.INTERIOR_TOP {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    margin-top: 20px;
+}
+
+.InteriorNavLeft,
+.InteriorNavRight {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.INTERIOR_TOP img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.ITEMS_NAVBAR {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 0 80px; 
+    margin-top: 60px;
+}
+
+.NavbarCenter ul {
+    display: flex; 
+    gap: 100px;     
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.NavbarCenter ul li {
+    position: relative;      
+    cursor: pointer;
+    padding: 5px 0;          
+}
+
+.NavbarCenter ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;           
+    width: 0%;
+    height: 4px;             
+    background-color: black; 
+    transition: width 0.3s ease;
+}
+
+.NavbarCenter ul li:hover::after {
+    width: 100%;             
+}
+
+.Outline-Container {
+    border: 2px solid black;
+}
+.ExploreProducts {
+    width: 80%;
+    display: flex;           
+    align-items: center;     
+    justify-content: flex-start; /* start from left */    
+}
+
+.text-area {
+    /* flex: 1;                 */
+    margin-left: 60px;
+}
+
+.ExploreProducts p {
+    margin: 0;
+    font-family: "Modern Antiqua", serif;
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.ExploreProducts button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+/* Images container moved fully right */
+.images-right {
+    display: flex;
+    margin-left: auto;  /* this pushes the whole images container to the far right */
+    align-items: center; 
+}
+
+/* Left image */
+.left-img {
+    scale: 0.9;
+}
+
+/* Right image */
+.right-img {
+    scale: 0.8;
+}
+
+.page2-container {
+    height: 100vh;
+}
+
+/* Parent container: horizontal layout */
+.FindBuyCollect {
+    display: flex;                  
+    justify-content: space-between; 
+    align-items: flex-start;        
+    gap: 20px;                      
+    width: 90%;
+    margin: 0 auto;                 
+}
+
+/* Each section: equal width and centered text */
+.FindBuyCollect .section {
+    display: flex;
+    flex-direction: column;
+    width: 30%;                  /* equal width for all three sections */
+    text-align: center;           /* center all text inside */
+    box-sizing: border-box;
+}
+
+/* H3: main label */
+.FindBuyCollect h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 15px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+/* H1: headline */
+.FindBuyCollect h1 {
+    font-size: 2rem;
+    margin: 0 0 15px 0;
+    font-family: "Modern Antiqua", serif;
+    font-weight: 400;
+    
+}
+
+/* Paragraph: description */
+.FindBuyCollect p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+}
+
+/* Parent container: two-column layout */
+.NewArrivalsSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: 160px auto;     /* more top spacing */
+    gap: 60px;             /* more space between left and right */
+    font-family: "Modern Antiqua", serif;
+}
+
+/* Left column */
+.NewArrivals-left {
+    flex: 1;               /* takes available space */
+    max-width: 500px;      /* larger left column */
+}
+
+/* Header with number */
+.NewArrivals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;   /* more spacing below header */
+}
+
+.NewArrivals-header h2 {
+    font-size: 3rem;       /* much bigger */
+    margin: 0;
+}
+
+.item-count {
+    font-size: 2rem;       /* bigger count */
+    color: #888;
+}
+
+/* Description paragraph */
+.NewArrivals-desc {
+    font-size: 1.6rem;     /* larger paragraph */
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+}
+
+/* View All link */
+.view-all {
+    display: inline-block;
+    font-size: 1.3rem;     /* bigger View All */
+    text-decoration: underline;
+    color: #000000;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+/* Right column: cards container */
+.NewArrivals-right {
+    display: flex;
+    gap: 40px;             /* more spacing between cards */
+    flex-wrap: wrap;       /* wrap on smaller screens */
+}
+
+/* Individual card */
+.card {
+    flex: 1;
+    max-width: 250px;      /* larger cards */
+    display: flex;
+    flex-direction: column;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+}
+
+/* Card image */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;   /* slightly bigger rounded corners */
+}
+
+/* Card info: title left, price right */
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 1.2rem;     /* bigger text */
+    font-weight: 600;
+}
+
+/* Card title */
+.card-title {
+    text-align: left;
+}
+
+/* Card price */
+.card-price {
+    text-align: right;
+    color: #000000;
+}
+
+
+/* Full page container */
+.ShopByCategory {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* for side images */
+    width: 100%;
+    background-color: #f7f7f7;  /* optional background */
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+/* Side images */
+.side-image {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    height: 80%;  /* adjust size */
+}
+
+.left-image {
+    left: 0;
+    scale: 0.8;
+}
+
+.right-image {
+    right: 0;
+    scale: 0.8;
+}
+
+/* Center content */
+.ShopByCategory-center {
+    text-align: center;
+    z-index: 1;  /* make sure it stays above images */
+}
+
+/* Main H1 */
+.ShopByCategory-center h1 {
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+/* Category items */
+.category-item {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+/* Counts */
+.category-item span {
+    font-weight: 700;
+    color: #000000;
+}
+
+/* See More link */
+.see-more {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Parent grid container */
+.parent {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px; /* optional spacing between images */
+}
+
+/* Make all divs images fill the grid area */
+.parent div {
+    position: relative;
+    overflow: hidden; /* hide overflow if image is larger */
+}
+
+/* Make images fill their container nicely */
+.parent div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill grid area without distortion */
+    display: block;
+    border-radius: 5px;
+}
+
+/* Grid areas */
+.div1 { grid-area: 1 / 1 / 3 / 5; }
+.div2 { grid-area: 1 / 5 / 7 / 7; }
+.div3 { grid-area: 3 / 1 / 7 / 3; }
+.div4 { grid-area: 3 / 3 / 7 / 5; }
+.div5 { grid-area: 1 / 5 / 3 / 7; }
+
+/* Container */
+.CenteredHeading {
+    display: flex;
+    flex-direction: column; /* stack h1 and h3 vertically */
+    align-items: center;    /* center horizontally */
+    justify-content: center; /* optional: center vertically if container has height */
+    text-align: center;      /* center text inside each heading */
+    padding: 50px 20px;      /* optional spacing around the heading */
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+/* H1 styling */
+.CenteredHeading h1 {
+    font-size: 4rem;        /* big, prominent */
+    font-weight: 700;
+    margin: 0;              /* remove default margin */
+    line-height: 1.5;
+    margin-top: 50px;
+}
+
+/* H3 styling */
+.CenteredHeading h3 {
+    font-size: 2rem;        /* smaller than h1 */
+    font-weight: 400;
+    margin-top: 20px;       /* spacing below h1 */
+    color: #555;            /* lighter color for subtitle */
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .side-image {
+        height: 60%;  /* scale down on smaller screens */
+    }
+
+    .ShopByCategory-center h1 {
+        font-size: 2.2rem;
+    }
+
+    .category-item {
+        font-size: 1.5rem;
+    }
+
+    .see-more {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-image {
+        display: none;  /* hide side images on mobile */
+    }
+
+    .ShopByCategory-center h1 {
+        font-size: 2rem;
+    }
+
+    .category-item {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* Responsive: stack left/right on smaller screens */
+@media (max-width: 900px) {
+    .NewArrivalsSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .NewArrivals-left {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .NewArrivals-right {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+/* Responsive: stack left/right on smaller screens */
+@media (max-width: 900px) {
+    .NewArrivalsSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .NewArrivals-left {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .NewArrivals-right {
+        justify-content: center;
+    }
+}
+
+
+/* Optional: responsive adjustment */
+@media (max-width: 900px) {
+    .FindBuyCollect {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .FindBuyCollect .section {
+        width: 80%;   /* wider on smaller screens */
+        margin-bottom: 30px;
+    }
+}
+
